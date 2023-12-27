@@ -1,0 +1,19 @@
+<div [ngClass]="!currentRoute?'wrapper': 'wrapper__responsive'">
+    <div class="text__wrapper" (click)="navigateToFeedbackDetails(feedback.id.toString())">
+        <p  class="title">
+           {{feedback.title}}
+        </p>
+        <p class="subtitle">
+            {{feedback.comment | capitalizeFirstLetter}}
+        </p>
+        <!-- <p *ngIf="!currentRoute" class="subtitle">
+            {{feedback.comment | ellipsis}}
+        </p> -->
+        <div class="tag"> 
+            <p> {{feedback.rating}}</p>
+        </div>
+        <div class="tag" *ngIf="feedback.userName !== username"> 
+            <p> {{feedback.userName}}</p>
+        </div>
+    </div> 
+</div>

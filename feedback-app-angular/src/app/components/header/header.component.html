@@ -1,0 +1,15 @@
+<header (click)="this.isDropdownOpen=false">
+    <div *ngIf="route=='/'" class="wrapper">
+        <div class="logo__wpapper">
+            <p>{{suggestionCount +' Suggestions'}} </p>
+        </div>
+    </div>
+    <div  *ngIf="route!=='/'" class="roadmap__wrapper">
+      <app-go-back [color]="'white'" ></app-go-back>
+      <p>Roadmap</p>
+    </div>
+  <app-button [buttonClass]="'add__btn'" class="btn" routerLink="/add" >
+    <p>+ Add Feedback</p>
+    <p>+</p>
+  </app-button>
+</header>

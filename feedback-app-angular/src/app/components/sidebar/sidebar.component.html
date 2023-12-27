@@ -1,0 +1,17 @@
+<div class="wrapper">
+    <div class="board">
+        <h1>{{username}}</h1>
+        <h2>Feedback Board</h2>
+    </div>
+    <div class="filter__wrapper">
+        <button [ngClass]="currentFilter==filter? 'filter__btn__active' : 'filter__btn'" *ngFor="let filter of filters" (click)="editCurrentFilter(filter)">
+           {{filter}}
+        </button>
+       
+    </div>
+    <div class="roadmap__wrapper">
+        <div class="header">
+            <button (click)="logout()" >Logout</button>
+        </div>
+    </div>
+</div>
